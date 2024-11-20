@@ -6,3 +6,6 @@ all the "CSV", "xlsx" and "pbx" files are data sets used in the codes except of 
 "Statistics of CESKO" file is a dataset of the turnouts and percentages of "Georgian Dream Party", and this file is used for Density graph in tha paper (Fig.2)
 "density" file is the code that constructs the Fig.2 in the paper
 "election_size" is the dataset of the precincts and how many people voted in those precincts in total (used in the main code)
+"electoraldistrictprb" file is an official percentage of each political party in each and every electoral district (used in the main code)
+"realdist5%" is a dataset of the real official distribution for 5% bin size (used in a main code)
+"1-BINS" is a dataset of the real official distribution for 1% bin size (used in a main code)
