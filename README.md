@@ -3,7 +3,7 @@
 (This repository contains a Python-based simulation for analyzing election data and detecting irregularities by comparing simulated election results to official outcomes. The project uses official "CEC" election data to simulate voting outcomes, apply Gaussian noise to the voting probabilities, and compare the simulated distribution to official results, allowing for the detection of potential election falsification.
 
 Project Overview
-This tool simulates election outcomes using real-world election data, applying Gaussian noise to simulate natural variations in voting behavior. The simulation results are then compared with the official distribution of votes for a particular political party. This approach can help identify discrepancies that may suggest potential electoral fraud or irregularities.
+This tool simulates election outcomes using official "CEC" election data, applying Gaussian noise to simulate natural variations in voting behavior. The simulation results are then compared with the official distribution of votes for a particular political party. This approach can help identify discrepancies that may suggest potential electoral fraud or irregularities.
 
 Key Features:
 Simulate Elections: Simulate vote distributions for a given party across multiple precincts using official vote percentage data.
