@@ -40,7 +40,11 @@ https://www.microsoft.com/en-us/download/details.aspx?id=58494
 ("Statistics of CESKO.csv" file is a dataset of the turnouts and percentages of "The Georgian Dream Party", and this file is used for Density graph in tha paper (Fig.2)
 
 
-"density.ipynb" file is the code that constructs the Fig.2 in the paper
+
+"density.ipyn" file
+For better understanding: this code constructs a 2D graph of election results, mainly for visualizing the correlation between the “Georgian Dream” party's share of the turnout, the percentage turnout in precincts, and the size of the precincts (based on the number of turnouts), to visually recognize patterns of election fraud. For this, we construct our code in the following way: using official data from “CEC” (file named: “Statistics of CESKO.csv”), we plot points on the graph where the “Georgian Dream” party's share of the turnout (column “GD Share of the turnout” from the CSV file) is used as the y-coordinate, the percentage turnout in precincts (column “Perc Turnout” from the CSV file) is used as the x-coordinate, and the number of turnouts (column “Turnout”) is used to determine the size of the points. To calculate the density of the points on the graph, we stack the x- and y-coordinates of the points into a 2D NumPy array using the np.vstack() function. This array is then passed to the Gaussian Kernel Density Estimation (KDE) function, gaussian_kde(xy)(xy), which computes the density at each point based on how close the points are to each other. After calculating the density, the next step is to normalize the sizes of the points. For normalization, we use a straightforward Min-Max scaling method: we assign proportional values from 0 to 1 by subtracting the minimum size of the turnouts from each point's size (turnout) and then dividing by the range of the turnouts (max(size) - min(size)). This normalized value is then multiplied by an arbitrary number (300 in this case) to make the sizes visually distinguishable. Finally, we plot the graph as a scatter plot using plt.scatter(), where the x-values, y-values, density values, and normalized sizes are passed as inputs. We use the viridis colormap for visualizing density and set the transparency of points with alpha=0.6. A colorbar is added to the graph using plt.colorbar() to indicate the density scale.
+
+
 
 
 "election_size.csv" is the dataset of the precincts and how many people voted in those precincts in total (used in the main code)
